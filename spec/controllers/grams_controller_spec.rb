@@ -129,7 +129,6 @@ RSpec.describe GramsController, type: :controller do
     end
   end
 
-
   describe "grams#new action" do
     it "should require users to be logged in" do
       get :new
@@ -178,6 +177,5 @@ RSpec.describe GramsController, type: :controller do
       expect(response).to have_http_status(:unprocessable_entity)
       expect(gram_count).to eq Gram.count
     end
-
   end
 end
